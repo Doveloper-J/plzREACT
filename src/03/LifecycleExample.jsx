@@ -11,8 +11,8 @@ class LifecycleExample extends React.Component {
     console.log('constructor called');
   }
   componentDidMount() {
-    console.log('componentDidMount called - 생성과정');
-    this.setState({ updated: true });
+    console.log('componentDidMount called - 생성 과정');
+    this.forceUpdate();
   }
   componentDidUpdate() {
     console.log('componentDidUpdate called - 갱신과정');
@@ -26,7 +26,7 @@ class LifecycleExample extends React.Component {
   }
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate called - 갱신과정');
-    return {};
+    return false;
   }
 
   render() {
